@@ -1,0 +1,194 @@
+{
+  "folderId": "nKBGcfpLRpEWVltFvyUnZ",
+  "appId": "gwUVpBgCIvsFqJKbxiRBo",
+  "id": "BvhlxdIRVQoAPqcCDRKQj",
+  "name": "New Workflow",
+  "type": "ORCHESTRATION",
+  "itemType": "workflow",
+  "version": "0.0.1",
+  "steps": [
+    {
+      "id": "OUhHugBbRRTezcnVdbOua",
+      "stepName": "ReadSFTPFile",
+      "stepType": "SIMPLE",
+      "icon": "",
+      "indicator": "",
+      "description": "",
+      "deletable": true,
+      "config": {
+        "activityName": "ReadSFTPFile",
+        "activityGroup": "Sftp",
+        "activityType": "SIMPLE",
+        "encryption": "PGP",
+        "encryptionResource": "cf:{\"id\":\"PkgDlleBuvBgLBQQteplR\",\"name\":\"pins\"}",
+        "compression": "NONE",
+        "name": "ReadSFTPFile",
+        "description": "",
+        "vfsConnection": "ref:{\"id\":\"gwUVpBgCIvsFqJKbxiRBo/SoBNPPfuAGwiXBKdgOppR\",\"name\":\"/Resources/SFTPConnection\"}",
+        "authContext": "",
+        "workingDirectory": "test",
+        "filePath": "regression",
+        "fileName": "certificateTesting",
+        "contentType": "CSV",
+        "isCustomType": true,
+        "templateOfActivity": "ReadFile",
+        "templateOfGroup": "File",
+        "sourceSchemas": [
+          "zJAwAiOPrlANlzmcVCoGz"
+        ]
+      },
+      "activityCluster": null
+    },
+    {
+      "id": "PLKkMOzOakvgJJVRdNVGb",
+      "stepName": "End",
+      "stepType": "END",
+      "icon": "",
+      "indicator": "",
+      "description": "",
+      "deletable": true,
+      "config": {
+        "activityName": "End",
+        "activityGroup": "Common",
+        "activityType": "END",
+        "name": "End",
+        "sourceSchemas": [
+          "zJAwAiOPrlANlzmcVCoGz",
+          "OUhHugBbRRTezcnVdbOua"
+        ],
+        "targetSchema": "rcxTINnXsYkkwPwMWKhnm"
+      }
+    },
+    {
+      "id": "zJAwAiOPrlANlzmcVCoGz",
+      "stepName": "RESTService",
+      "stepType": "EVENT_SOURCE",
+      "icon": "",
+      "indicator": "",
+      "description": "",
+      "deletable": true,
+      "config": {
+        "activityName": "RESTService",
+        "activityGroup": "HTTP",
+        "activityType": "EVENT_SOURCE",
+        "name": "RESTService",
+        "description": "",
+        "path": "/test",
+        "method": [
+          "GET"
+        ],
+        "allowedMediaTypes": [
+          "application/json"
+        ],
+        "headers": [],
+        "queryParams": [],
+        "pathParams": [],
+        "output": "",
+        "sourceSchemas": [],
+        "showHttpFormSelectionPanel": false
+      },
+      "activityCluster": null
+    }
+  ],
+  "transitions": [
+    {
+      "id": "BIzHSlyEWBjkuMLUYSFAo",
+      "from": "OUhHugBbRRTezcnVdbOua",
+      "to": "PLKkMOzOakvgJJVRdNVGb",
+      "handleMap": {
+        "source": "OUhHugBbRRTezcnVdbOua_2",
+        "target": "PLKkMOzOakvgJJVRdNVGb_1"
+      },
+      "name": "",
+      "description": "",
+      "type": "DEFAULT",
+      "lineType": "step",
+      "lineColor": "#8c8c8c"
+    },
+    {
+      "id": "nNXRvQkkIeBeDEosExtzx",
+      "from": "zJAwAiOPrlANlzmcVCoGz",
+      "to": "OUhHugBbRRTezcnVdbOua",
+      "handleMap": {
+        "source": "zJAwAiOPrlANlzmcVCoGz_1",
+        "target": "OUhHugBbRRTezcnVdbOua_1"
+      },
+      "name": "",
+      "description": "",
+      "type": "DEFAULT",
+      "lineType": "step",
+      "lineColor": "#8c8c8c"
+    }
+  ],
+  "diagram": {
+    "OUhHugBbRRTezcnVdbOua": {
+      "x": 240,
+      "y": 48,
+      "handles": [
+        {
+          "type": "target",
+          "position": "left",
+          "id": "OUhHugBbRRTezcnVdbOua_1"
+        },
+        {
+          "type": "source",
+          "position": "right",
+          "id": "OUhHugBbRRTezcnVdbOua_2"
+        }
+      ],
+      "sourcePosition": "right",
+      "targetPosition": "left"
+    },
+    "PLKkMOzOakvgJJVRdNVGb": {
+      "x": 512,
+      "y": 48,
+      "handles": [
+        {
+          "type": "source",
+          "position": "left",
+          "id": "PLKkMOzOakvgJJVRdNVGb_1"
+        }
+      ],
+      "sourcePosition": null,
+      "targetPosition": "left"
+    },
+    "zJAwAiOPrlANlzmcVCoGz": {
+      "x": 16,
+      "y": 48,
+      "handles": [
+        {
+          "type": "source",
+          "position": "right",
+          "id": "zJAwAiOPrlANlzmcVCoGz_1"
+        }
+      ],
+      "sourcePosition": "right",
+      "targetPosition": null
+    }
+  },
+  "notes": [],
+  "mappings": {
+    "PLKkMOzOakvgJJVRdNVGb": {
+      "metaInfo": {
+        "id": "PLKkMOzOakvgJJVRdNVGb",
+        "versionInfo": {
+          "version": "1.0.0"
+        },
+        "name": "End",
+        "description": ""
+      },
+      "mappings": {
+        "End": {
+          "body": {
+            "__expr__": "$.ReadSFTPFile.readFileOutput"
+          }
+        }
+      },
+      "attributes": {}
+    }
+  },
+  "config": {
+    "name": "New Workflow"
+  },
+  "workflowName": "New Workflow"
+}

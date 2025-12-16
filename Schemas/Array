@@ -1,0 +1,46 @@
+{
+  "id": "sljjomRQyIMLRtXtkcTbB",
+  "name": "Array",
+  "content": {
+    "type": "json-schema",
+    "destination": "source",
+    "content": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "title": "Array",
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "default": "",
+                "examples": [
+                  ""
+                ]
+              },
+              "city": {
+                "type": "string",
+                "default": "",
+                "examples": [
+                  ""
+                ]
+              }
+            }
+          }
+        }
+      },
+      "required": [
+        "title"
+      ]
+    },
+    "name": "Array",
+    "schemaSource": "file"
+  },
+  "appId": "gwUVpBgCIvsFqJKbxiRBo",
+  "folderId": "hXIzqFzuvraQxjLrThLku",
+  "itemType": "appSchemas",
+  "gitEnabled": true
+}

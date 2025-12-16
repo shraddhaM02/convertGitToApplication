@@ -1,0 +1,146 @@
+{
+  "id": "urYncAIxhWPkIlAwBANKI",
+  "name": "Passengers_1",
+  "content": {
+    "type": "json-schema",
+    "destination": "source",
+    "content": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "title": "Passengers",
+      "type": "object",
+      "properties": {
+        "flight_number": {
+          "type": "string",
+          "default": "",
+          "examples": [
+            "AB1234"
+          ]
+        },
+        "departure": {
+          "type": "string",
+          "default": "",
+          "examples": [
+            "2024-06-01T10:00:00Z"
+          ]
+        },
+        "arrival": {
+          "type": "string",
+          "default": "",
+          "examples": [
+            "2024-06-01T14:00:00Z"
+          ]
+        },
+        "passengers": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "examples": [
+                {
+                  "name": "John Doe",
+                  "age": 30,
+                  "email": "john.doe@example.com",
+                  "ticket_number": "A1B2C3"
+                },
+                {
+                  "name": "Jane Smith",
+                  "age": 25,
+                  "email": "jane.smith@example.com",
+                  "ticket_number": "D4E5F6"
+                }
+              ],
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "default": "",
+                  "examples": [
+                    "John Doe"
+                  ]
+                },
+                "age": {
+                  "type": "number",
+                  "default": 0,
+                  "examples": [
+                    30
+                  ]
+                },
+                "email": {
+                  "type": "string",
+                  "default": "",
+                  "examples": [
+                    "john.doe@example.com"
+                  ]
+                },
+                "ticket_number": {
+                  "type": "string",
+                  "default": "",
+                  "examples": [
+                    "A1B2C3"
+                  ]
+                }
+              },
+              "required": [
+                "name",
+                "age",
+                "email",
+                "ticket_number"
+              ]
+            }
+          ],
+          "default": [],
+          "examples": [
+            [
+              {
+                "name": "John Doe",
+                "age": 30,
+                "email": "john.doe@example.com",
+                "ticket_number": "A1B2C3"
+              },
+              {
+                "name": "Jane Smith",
+                "age": 25,
+                "email": "jane.smith@example.com",
+                "ticket_number": "D4E5F6"
+              }
+            ]
+          ]
+        }
+      },
+      "required": [
+        "flight_number",
+        "departure",
+        "arrival",
+        "passengers"
+      ],
+      "default": {},
+      "examples": [
+        {
+          "flight_number": "AB1234",
+          "departure": "2024-06-01T10:00:00Z",
+          "arrival": "2024-06-01T14:00:00Z",
+          "passengers": [
+            {
+              "name": "John Doe",
+              "age": 30,
+              "email": "john.doe@example.com",
+              "ticket_number": "A1B2C3"
+            },
+            {
+              "name": "Jane Smith",
+              "age": 25,
+              "email": "jane.smith@example.com",
+              "ticket_number": "D4E5F6"
+            }
+          ]
+        }
+      ]
+    },
+    "name": "Passengers",
+    "schemaSource": "file",
+    "reference": "$ref://schema-registry/eXAnpUYRDHpQpkMNXQwCC"
+  },
+  "appId": "gwUVpBgCIvsFqJKbxiRBo",
+  "folderId": "hXIzqFzuvraQxjLrThLku",
+  "itemType": "appSchemas",
+  "gitEnabled": true
+}

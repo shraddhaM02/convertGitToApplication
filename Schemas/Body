@@ -1,0 +1,29 @@
+{
+  "id": "rcxTINnXsYkkwPwMWKhnm",
+  "name": "Body",
+  "content": {
+    "type": "json-schema",
+    "destination": "source",
+    "content": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "title": "Body",
+      "type": "object",
+      "properties": {
+        "body": {
+          "type": "object",
+          "properties": {},
+          "required": []
+        }
+      },
+      "required": [
+        "body"
+      ]
+    },
+    "name": "Body",
+    "schemaSource": "file"
+  },
+  "appId": "gwUVpBgCIvsFqJKbxiRBo",
+  "folderId": "hXIzqFzuvraQxjLrThLku",
+  "itemType": "appSchemas",
+  "gitEnabled": true
+}

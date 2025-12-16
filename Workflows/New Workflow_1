@@ -1,0 +1,107 @@
+{
+  "folderId": "nKBGcfpLRpEWVltFvyUnZ",
+  "appId": "gwUVpBgCIvsFqJKbxiRBo",
+  "id": "xaeBcUsJUkISirggLsgzL",
+  "name": "New Workflow_1",
+  "type": "ORCHESTRATION",
+  "itemType": "workflow",
+  "version": "0.0.1",
+  "steps": [
+    {
+      "id": "bDSjGyyPlHBBaenpAHWYb",
+      "stepName": "Select Trigger",
+      "stepType": "EVENT_SOURCE",
+      "icon": "",
+      "indicator": "",
+      "description": "",
+      "deletable": true,
+      "config": {
+        "activityType": "EVENT_SOURCE",
+        "activityName": "Start",
+        "activityGroup": "Common",
+        "name": "Select Trigger",
+        "config.name": "Select Trigger",
+        "sourceSchemas": []
+      }
+    },
+    {
+      "id": "dhXXnVbmrINIKwyTNCWDV",
+      "stepName": "End",
+      "stepType": "END",
+      "icon": "",
+      "indicator": "",
+      "description": "",
+      "deletable": true,
+      "config": {
+        "activityType": "END",
+        "activityName": "End",
+        "activityGroup": "Common",
+        "name": "End",
+        "sourceSchemas": [
+          "bDSjGyyPlHBBaenpAHWYb"
+        ]
+      }
+    }
+  ],
+  "transitions": [
+    {
+      "id": "JwLHpClvKiqhgcwQHEuMe",
+      "from": "bDSjGyyPlHBBaenpAHWYb",
+      "to": "dhXXnVbmrINIKwyTNCWDV",
+      "handleMap": {
+        "source": "bDSjGyyPlHBBaenpAHWYb_1",
+        "target": "dhXXnVbmrINIKwyTNCWDV_1"
+      },
+      "name": "",
+      "description": "",
+      "type": "DEFAULT",
+      "lineType": "step",
+      "lineColor": "#8c8c8c"
+    }
+  ],
+  "diagram": {
+    "bDSjGyyPlHBBaenpAHWYb": {
+      "x": 16,
+      "y": 48,
+      "handles": [
+        {
+          "type": "source",
+          "position": "right",
+          "id": "bDSjGyyPlHBBaenpAHWYb_1"
+        }
+      ],
+      "sourcePosition": "right",
+      "targetPosition": null
+    },
+    "dhXXnVbmrINIKwyTNCWDV": {
+      "x": 512,
+      "y": 48,
+      "handles": [
+        {
+          "type": "source",
+          "position": "left",
+          "id": "dhXXnVbmrINIKwyTNCWDV_1"
+        }
+      ],
+      "sourcePosition": null,
+      "targetPosition": "left"
+    }
+  },
+  "notes": [
+    {
+      "id": "gnBiGtaJvDfojjVaxbvdh",
+      "position": {
+        "x": 80,
+        "y": -144
+      },
+      "description": "<http://localhost:5173/user/applications/HzVvscHXniluDZjPgtapC/workflow/scBnBojHEoyuQTAyOkicY>",
+      "width": 278,
+      "height": 101
+    }
+  ],
+  "mappings": {},
+  "config": {
+    "name": "New Workflow"
+  },
+  "workflowName": "New Workflow_1"
+}

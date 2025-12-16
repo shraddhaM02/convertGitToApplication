@@ -1,0 +1,283 @@
+{
+  "id": "SoBNPPfuAGwiXBKdgOppR",
+  "name": "SFTPConnection",
+  "description": "",
+  "itemType": "resource",
+  "version": "0.0.1",
+  "appId": "gwUVpBgCIvsFqJKbxiRBo",
+  "folderId": "BzjZeyYukiIlSgQbQrMnk",
+  "activityId": "SFTPConnection",
+  "resourceConfig": {
+    "activityGroup": "SFTP",
+    "activityName": "SFTPConnection",
+    "activityType": "RESOURCE",
+    "name": "SFTPConnection",
+    "description": "",
+    "host": "$:{\"id\":{},\"name\":\"us-east-1.sftpcloud.io\"}",
+    "port": 22,
+    "user": "$:{\"id\":{},\"name\":\"be4e6bfdc4a34a1f8ae2a8954fa548f0\"}",
+    "authType": "Password",
+    "sshKey": "cf:{\"id\":\"\",\"name\":\"\"}",
+    "password": "$:{\"id\":{},\"name\":\"R8BCa3tFn3MaBlkyGtpc2wuWeVoaujKr\"}",
+    "timeout": 1000000,
+    "connectTimeout": 1000000,
+    "verificationType": "NONE",
+    "hostKey": "$:{\"id\":{},\"name\":\"\"}",
+    "hostKeyFingerprint": "$:{\"id\":{},\"name\":\"\"}",
+    "config.name": "SFTPConnection"
+  },
+  "resourceMeta": {
+    "createdDate": "Tue Dec 16 2025",
+    "createdBy": "admin "
+  },
+  "resourceType": {
+    "id": "SFTPConnection",
+    "version": "0.0.1",
+    "name": "SFTPConnection",
+    "description": "SFTP Connection Resource",
+    "itemType": "activity",
+    "stepType": "SIMPLE",
+    "position": null,
+    "handles": [
+      {
+        "position": "left",
+        "type": "source"
+      },
+      {
+        "position": "right",
+        "type": "source"
+      }
+    ],
+    "deletable": true,
+    "form": {
+      "layout": {
+        "type": "tabs",
+        "config": [
+          {
+            "key": "config",
+            "label": "Configuration"
+          },
+          {
+            "key": "advanced",
+            "label": "Advanced"
+          }
+        ]
+      },
+      "items": [
+        {
+          "name": "name",
+          "type": "text",
+          "layoutKey": "config",
+          "span": 12,
+          "placeholder": "Enter name of component",
+          "label": "Name",
+          "required": true,
+          "validations": [
+            {
+              "type": "required",
+              "message": "Name is required"
+            }
+          ]
+        },
+        {
+          "name": "description",
+          "type": "text",
+          "layoutKey": "config",
+          "span": 12,
+          "placeholder": "Enter description of component",
+          "label": "Description",
+          "required": false,
+          "validations": []
+        },
+        {
+          "name": "host",
+          "type": "DndField",
+          "DNDtype": "global-variable",
+          "enableTesting": true,
+          "layoutKey": "config",
+          "span": 12,
+          "placeholder": "SFTP Host",
+          "label": "Host",
+          "required": true,
+          "validations": [
+            {
+              "type": "required",
+              "message": "Host is required"
+            }
+          ]
+        },
+        {
+          "name": "port",
+          "type": "DndField",
+          "DNDtype": "global-variable",
+          "enableTesting": true,
+          "layoutKey": "config",
+          "span": 12,
+          "placeholder": "SFTP Port",
+          "label": "Port",
+          "defaultValue": "22",
+          "required": true,
+          "validations": []
+        },
+        {
+          "name": "user",
+          "type": "DndField",
+          "DNDtype": "global-variable",
+          "enableTesting": true,
+          "layoutKey": "config",
+          "span": 12,
+          "placeholder": "SFTP User",
+          "label": "User",
+          "required": true,
+          "validations": [
+            {
+              "type": "required",
+              "message": "User is required"
+            }
+          ]
+        },
+        {
+          "name": "authType",
+          "type": "select",
+          "options": [
+            {
+              "label": "SSH",
+              "value": "SSH"
+            },
+            {
+              "label": "Password",
+              "value": "Password"
+            }
+          ],
+          "layoutKey": "config",
+          "span": 12,
+          "label": "Authentication Type",
+          "required": false,
+          "validations": []
+        },
+        {
+          "name": "sshKey",
+          "type": "DndField",
+          "DNDtype": "certificates",
+          "layoutKey": "config",
+          "span": 12,
+          "placeholder": "Select SSH Key",
+          "label": "SSH Key",
+          "required": false,
+          "validations": [],
+          "isHidden": "$authType == 'Password'"
+        },
+        {
+          "name": "password",
+          "type": "DndField",
+          "DNDtype": "global-variable",
+          "enableTesting": true,
+          "layoutKey": "config",
+          "span": 12,
+          "placeholder": "SFTP Password",
+          "label": "Password",
+          "required": false,
+          "validations": [],
+          "isHidden": "$authType == 'SSH'"
+        },
+        {
+          "name": "timeout",
+          "type": "number",
+          "layoutKey": "advanced",
+          "span": 12,
+          "placeholder": "Timeout Value",
+          "label": "Timeout",
+          "defaultValue": "300",
+          "required": false,
+          "validations": []
+        },
+        {
+          "name": "connectTimeout",
+          "type": "number",
+          "layoutKey": "advanced",
+          "span": 12,
+          "placeholder": "Connection Timeout Value",
+          "label": "Connection Timeout",
+          "defaultValue": "300",
+          "required": false,
+          "validations": []
+        },
+        {
+          "name": "verificationType",
+          "type": "select",
+          "options": [
+            {
+              "label": "NONE",
+              "value": "NONE"
+            },
+            {
+              "label": "Host Key",
+              "value": "hostKey"
+            },
+            {
+              "label": "Host Key Fingerprint",
+              "value": "hostKeyFingerprint"
+            }
+          ],
+          "layoutKey": "advanced",
+          "span": 12,
+          "label": "Host Verification",
+          "required": false,
+          "validations": []
+        },
+        {
+          "name": "hostKey",
+          "type": "DndField",
+          "DNDtype": "global-variable",
+          "layoutKey": "advanced",
+          "span": 12,
+          "label": "Host Key",
+          "infoMsg": "Host Key is of the format - example.com ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQD...",
+          "placeholder": "Host Key",
+          "required": false,
+          "isHidden": "$verificationType != 'hostKey'",
+          "validations": []
+        },
+        {
+          "name": "hostKeyFingerprint",
+          "type": "DndField",
+          "DNDtype": "global-variable",
+          "layoutKey": "advanced",
+          "span": 12,
+          "label": "Host Key Fingerprint",
+          "infoMsg": "hex encoded format - d0:be:ab:cd:ef:12:34:56:78:90:...",
+          "placeholder": "Host Key Fingerprint - Hex encoded format",
+          "isHidden": "$verificationType != 'hostKeyFingerprint'",
+          "required": false,
+          "validations": []
+        }
+      ]
+    },
+    "config": {
+      "activityGroup": "SFTP",
+      "activityName": "SFTPConnection",
+      "activityType": "RESOURCE"
+    },
+    "validationSchema": null,
+    "defaultConfig": null,
+    "visible": true,
+    "sourcePosition": "right",
+    "targetPosition": "left",
+    "indicator": null,
+    "activityGroupId": "SFTP",
+    "icon": "<svg width=\"36\" height=\"36\" viewBox=\"0 0 36 36\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M4.192 23.384V5.389c0-.368.157-.722.435-.982S5.283 4 5.677 4h4.349a1.53 1.53 0 0 1 .868.258c.252.17.44.412.536.69l.483 1.335c.095.277.283.519.535.69s.557.26.868.258H26.87c.394 0 .771.146 1.05.407.278.26.434.613.434.982l.03 1.81\" fill=\"#E8ECFF\"/><path d=\"M4.192 23.384V5.389c0-.368.157-.722.435-.982S5.283 4 5.677 4h4.349a1.53 1.53 0 0 1 .868.258c.252.17.44.412.536.69l.483 1.335c.095.277.283.519.535.69s.557.26.868.258H26.87c.394 0 .771.146 1.05.407.278.26.434.613.434.982l.03 1.81\" stroke=\"#5C41FF\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M28.315 9.385h2.097c.246.004.488.07.705.194.216.123.402.299.541.513a1.72 1.72 0 0 1 .177 1.482l-3.99 11.81H4.607l2.757-12.917c.106-.314.3-.586.557-.779.256-.193.562-.3.878-.303z\" fill=\"#E8ECFF\" stroke=\"#5C41FF\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M12.144 15.27a.64.64 0 0 0-.285-.481q-.251-.171-.682-.172-.293 0-.494.077a.7.7 0 0 0-.31.207.47.47 0 0 0-.105.302.4.4 0 0 0 .064.246.6.6 0 0 0 .196.181q.125.075.287.13.163.055.348.093l.509.112q.37.078.68.205.308.128.535.315.227.185.35.44.129.252.13.58-.002.48-.265.834-.26.35-.75.545-.49.192-1.18.192-.685 0-1.194-.195-.505-.195-.79-.575-.282-.384-.295-.95h1.157a.77.77 0 0 0 .163.44.9.9 0 0 0 .39.264q.245.087.555.087.303 0 .527-.081a.8.8 0 0 0 .351-.228.5.5 0 0 0 .125-.335.42.42 0 0 0-.114-.297.9.9 0 0 0-.326-.205 3.5 3.5 0 0 0-.522-.153l-.616-.143q-.715-.162-1.13-.504-.414-.344-.411-.924-.002-.476.273-.831a1.83 1.83 0 0 1 .765-.555 2.9 2.9 0 0 1 1.105-.2q.63 0 1.1.2.473.2.735.555.263.356.27.824zm2.028 3.732v-5.239h3.746v.913h-2.55v1.249h2.301v.913h-2.3v2.164zm4.335-4.326v-.913h4.647v.913h-1.732v4.326h-1.183v-4.326zm5.412 4.326v-5.239h2.232q.643 0 1.096.228.454.225.691.626.24.399.24.921t-.243.921a1.63 1.63 0 0 1-.704.622q-.459.222-1.11.222h-1.423v-.887h1.229q.345 0 .569-.11a.76.76 0 0 0 .337-.31.9.9 0 0 0 .113-.458.9.9 0 0 0-.113-.455.73.73 0 0 0-.337-.305 1.3 1.3 0 0 0-.575-.11h-.806v4.334z\" fill=\"#5C41FF\"/><path d=\"M16.636 23.74v3.191\" stroke=\"#5C41FF\" stroke-width=\".75\" stroke-linecap=\"square\" stroke-linejoin=\"round\"/><path d=\"M16.849 31.999c-.455 0-.9-.126-1.279-.363a2.2 2.2 0 0 1-.847-.967 2.03 2.03 0 0 1-.13-1.244c.088-.418.307-.802.629-1.103a2.35 2.35 0 0 1 1.178-.59c.446-.082.91-.04 1.33.123s.78.44 1.032.794c.253.354.388.77.388 1.196\" fill=\"#E8ECFF\" stroke=\"#5C41FF\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M3 29.486h10.91m5.453 0H33\" stroke=\"#5C41FF\" stroke-linecap=\"square\" stroke-linejoin=\"round\"/></svg>",
+    "icon_id": null,
+    "publisher": "ivoyant",
+    "createdOn": "2024-10-29T18:25:22.702",
+    "createdBy": "system",
+    "updatedOn": "2024-10-29T18:25:22.702",
+    "publishedOn": "2024-10-29T18:25:22.702",
+    "updatedBy": "system",
+    "status": "APPROVED",
+    "activityCluster": null,
+    "tags": [],
+    "meta": null,
+    "comments": null,
+    "customActivity": false
+  }
+}

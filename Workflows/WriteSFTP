@@ -1,0 +1,248 @@
+{
+  "folderId": "nKBGcfpLRpEWVltFvyUnZ",
+  "appId": "gwUVpBgCIvsFqJKbxiRBo",
+  "id": "DvKsPcusyPUrmeSCjPAuX",
+  "name": "WriteSFTP",
+  "type": "ORCHESTRATION",
+  "itemType": "workflow",
+  "version": "0.0.1",
+  "steps": [
+    {
+      "id": "bnqSXgCxStKDBmZsGmtUw",
+      "stepName": "RESTService",
+      "stepType": "EVENT_SOURCE",
+      "icon": "",
+      "indicator": "",
+      "description": "",
+      "deletable": true,
+      "config": {
+        "activityName": "RESTService",
+        "activityGroup": "HTTP",
+        "activityType": "EVENT_SOURCE",
+        "name": "RESTService",
+        "description": "",
+        "path": "/writeSFTP?directory&path&name&createdirectory&overwrite",
+        "method": [
+          "GET"
+        ],
+        "allowedMediaTypes": [
+          "application/json"
+        ],
+        "queryParams": [
+          {
+            "name": "directory",
+            "defaultValue": "",
+            "type": "text",
+            "required": false
+          },
+          {
+            "name": "path",
+            "defaultValue": "",
+            "type": "text",
+            "required": false
+          },
+          {
+            "name": "name",
+            "defaultValue": "",
+            "type": "text",
+            "required": false
+          },
+          {
+            "name": "createdirectory",
+            "defaultValue": "",
+            "type": "boolean",
+            "required": false
+          },
+          {
+            "name": "overwrite",
+            "defaultValue": "",
+            "type": "boolean",
+            "required": false
+          }
+        ],
+        "pathParams": [],
+        "output": "sljjomRQyIMLRtXtkcTbB",
+        "headers": [],
+        "showHttpFormSelectionPanel": false,
+        "sourceSchemas": [],
+        "outputRootArrayName": "title",
+        "isOutputAnonymousArray": true
+      }
+    },
+    {
+      "id": "nqjQOZjJGNRHDumVTZGXZ",
+      "stepName": "WriteSFTPFile",
+      "stepType": "SIMPLE",
+      "icon": "",
+      "indicator": "",
+      "description": "",
+      "deletable": true,
+      "config": {
+        "activityName": "WriteSFTPFile",
+        "activityGroup": "Sftp",
+        "activityType": "SIMPLE",
+        "encryption": "PGP",
+        "encryptionResource": "cf:{\"id\":\"PkgDlleBuvBgLBQQteplR\",\"name\":\"pins\"}",
+        "compression": "NONE",
+        "createDirectory": true,
+        "overwrite": true,
+        "name": "WriteSFTPFile",
+        "description": "",
+        "vfsConnection": "ref:{\"id\":\"gwUVpBgCIvsFqJKbxiRBo/SoBNPPfuAGwiXBKdgOppR\",\"name\":\"/Resources/SFTPConnection\"}",
+        "authContext": "",
+        "workingDirectory": "test",
+        "filePath": "regression",
+        "fileName": "certificateTesting",
+        "contentType": "TEXT",
+        "append": false,
+        "isCustomType": true,
+        "templateOfActivity": "WriteFile",
+        "templateOfGroup": "File",
+        "sourceSchemas": [
+          "bnqSXgCxStKDBmZsGmtUw"
+        ]
+      }
+    },
+    {
+      "id": "ViYTWPnjavoQiDAODvWwX",
+      "stepName": "End",
+      "stepType": "END",
+      "icon": "",
+      "indicator": "",
+      "description": "",
+      "deletable": true,
+      "config": {
+        "activityName": "End",
+        "activityGroup": "Common",
+        "activityType": "END",
+        "name": "End",
+        "sourceSchemas": [
+          "nqjQOZjJGNRHDumVTZGXZ",
+          "bnqSXgCxStKDBmZsGmtUw"
+        ],
+        "targetSchema": "rcxTINnXsYkkwPwMWKhnm"
+      }
+    }
+  ],
+  "transitions": [
+    {
+      "id": "nXQFagygUuxTsBgzzVGJi",
+      "from": "bnqSXgCxStKDBmZsGmtUw",
+      "to": "nqjQOZjJGNRHDumVTZGXZ",
+      "handleMap": {
+        "source": "bnqSXgCxStKDBmZsGmtUw_1",
+        "target": "nqjQOZjJGNRHDumVTZGXZ_1"
+      },
+      "name": "",
+      "description": "",
+      "type": "DEFAULT",
+      "lineType": "step",
+      "lineColor": "#8c8c8c"
+    },
+    {
+      "id": "WFgXyAAtXKLZpgQVxoFSQ",
+      "from": "nqjQOZjJGNRHDumVTZGXZ",
+      "to": "ViYTWPnjavoQiDAODvWwX",
+      "handleMap": {
+        "source": "nqjQOZjJGNRHDumVTZGXZ_2",
+        "target": "ViYTWPnjavoQiDAODvWwX_1"
+      },
+      "name": "",
+      "description": "",
+      "type": "DEFAULT",
+      "lineType": "step",
+      "lineColor": "#8c8c8c"
+    }
+  ],
+  "diagram": {
+    "bnqSXgCxStKDBmZsGmtUw": {
+      "x": 128,
+      "y": 48,
+      "handles": [
+        {
+          "type": "source",
+          "position": "right",
+          "id": "bnqSXgCxStKDBmZsGmtUw_1"
+        }
+      ],
+      "sourcePosition": "right",
+      "targetPosition": null
+    },
+    "nqjQOZjJGNRHDumVTZGXZ": {
+      "x": 400,
+      "y": 48,
+      "handles": [
+        {
+          "type": "target",
+          "position": "left",
+          "id": "nqjQOZjJGNRHDumVTZGXZ_1"
+        },
+        {
+          "type": "source",
+          "position": "right",
+          "id": "nqjQOZjJGNRHDumVTZGXZ_2"
+        }
+      ],
+      "sourcePosition": "right",
+      "targetPosition": "left"
+    },
+    "ViYTWPnjavoQiDAODvWwX": {
+      "x": 688,
+      "y": 48,
+      "handles": [
+        {
+          "type": "source",
+          "position": "left",
+          "id": "ViYTWPnjavoQiDAODvWwX_1"
+        }
+      ],
+      "sourcePosition": null,
+      "targetPosition": "left"
+    }
+  },
+  "notes": [],
+  "mappings": {
+    "ViYTWPnjavoQiDAODvWwX": {
+      "metaInfo": {
+        "id": "ViYTWPnjavoQiDAODvWwX",
+        "versionInfo": {
+          "version": "1.0.0"
+        },
+        "name": "End",
+        "description": ""
+      },
+      "mappings": {
+        "End": {
+          "body": {
+            "__expr__": "$.WriteSFTPFile.writeFileOutput"
+          }
+        }
+      },
+      "attributes": {}
+    },
+    "nqjQOZjJGNRHDumVTZGXZ": {
+      "metaInfo": {
+        "id": "nqjQOZjJGNRHDumVTZGXZ",
+        "versionInfo": {
+          "version": "1.0.0"
+        },
+        "name": "WriteSFTPFile",
+        "description": ""
+      },
+      "mappings": {
+        "WriteSFTPFile": {
+          "content": "\"Test Write SFTP File\" "
+        }
+      },
+      "attributes": {}
+    }
+  },
+  "config": {
+    "name": "SimpleWriteCSV",
+    "description": "",
+    "workflowVariables": "",
+    "workflowAttributes": [],
+    "errorConfig": []
+  },
+  "workflowName": "WriteSFTP"
+}

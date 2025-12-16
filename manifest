@@ -1,0 +1,68 @@
+{
+  "name": "test123",
+  "organizationId": "153476dd-47bc-4620-b907-d1e11e38d9c0",
+  "organizationName": "ivoyant",
+  "workspaceId": "hkxydGxOzEJTaUHRhlOae",
+  "workspaceName": "del_ws",
+  "applicationId": "gwUVpBgCIvsFqJKbxiRBo",
+  "applicationName": "test123",
+  "description": "",
+  "level": "Single",
+  "integrations": [
+    {
+      "workflowId": "BvhlxdIRVQoAPqcCDRKQj",
+      "name": "NEw",
+      "trigger": "New Workflow",
+      "type": "api",
+      "description": ""
+    }
+  ],
+  "events": [
+    {
+      "name": "Demo",
+      "schema": {
+        "name": "Demo",
+        "type": "json-schema",
+        "content": {
+          "type": "object",
+          "title": "Demo",
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "required": [],
+          "properties": {
+            "message": {
+              "type": "string"
+            }
+          }
+        },
+        "destination": "source",
+        "schemaSource": "file"
+      },
+      "description": ""
+    }
+  ],
+  "resources": [
+    {
+      "name": "ABSConnection",
+      "authenticationType": "",
+      "description": "This is used to configure Azure Blob Storage",
+      "path": "ABSConnection",
+      "clientConfigurable": false
+    },
+    {
+      "name": "SFTPConnection",
+      "authenticationType": "",
+      "description": "SFTP Connection Resource",
+      "path": "SFTPConnection",
+      "clientConfigurable": false
+    }
+  ],
+  "variables": [
+    {
+      "id": "LIKdmVzjetVaDDvxtIyfP",
+      "name": "TestGVs",
+      "variables": []
+    }
+  ],
+  "manifestLevels": [],
+  "appConfigurations": []
+}

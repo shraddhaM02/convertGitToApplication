@@ -1,0 +1,26 @@
+{
+  "id": "IQQhCWmZgePUpEnmWDRpb",
+  "name": "Message",
+  "content": {
+    "type": "json-schema",
+    "destination": "source",
+    "content": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "message": {
+          "type": "string"
+        }
+      },
+      "required": [],
+      "title": "Message"
+    },
+    "name": "Message",
+    "schemaSource": "file",
+    "reference": "$ref://schema-registry/TIFkCVDwaCrKZMJFmFhzZ"
+  },
+  "appId": "gwUVpBgCIvsFqJKbxiRBo",
+  "folderId": "hXIzqFzuvraQxjLrThLku",
+  "itemType": "appSchemas",
+  "gitEnabled": true
+}

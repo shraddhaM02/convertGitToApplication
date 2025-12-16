@@ -1,0 +1,204 @@
+{
+  "folderId": "nKBGcfpLRpEWVltFvyUnZ",
+  "appId": "gwUVpBgCIvsFqJKbxiRBo",
+  "id": "cCUMIPKWMpHPUwKLttbDR",
+  "name": "New Workflow_2",
+  "type": "ORCHESTRATION",
+  "itemType": "workflow",
+  "version": "0.0.1",
+  "steps": [
+    {
+      "id": "pLTEQepOPFGImlKBiBOSC",
+      "stepName": "End",
+      "stepType": "END",
+      "icon": "",
+      "indicator": "",
+      "description": "",
+      "deletable": true,
+      "config": {
+        "activityName": "End",
+        "activityGroup": "Common",
+        "activityType": "END",
+        "name": "End",
+        "sourceSchemas": [
+          "UXtRXDgQHzbcbQSpSwJWI",
+          "zKiIJKrXJWRaoRKFncrhQ"
+        ],
+        "config.name": "End",
+        "targetSchema": "IQQhCWmZgePUpEnmWDRpb"
+      }
+    },
+    {
+      "id": "UXtRXDgQHzbcbQSpSwJWI",
+      "stepName": "RESTClient",
+      "stepType": "SIMPLE",
+      "icon": "",
+      "indicator": "",
+      "description": "",
+      "deletable": true,
+      "config": {
+        "activityType": "SIMPLE",
+        "activityGroup": "HTTP",
+        "activityName": "RESTClient",
+        "showHttpFormSelectionPanel": false,
+        "name": "RESTClient",
+        "config.name": "RESTClient",
+        "sourceSchemas": [
+          "zKiIJKrXJWRaoRKFncrhQ"
+        ]
+      },
+      "activityCluster": null
+    },
+    {
+      "id": "zKiIJKrXJWRaoRKFncrhQ",
+      "stepName": "RESTService",
+      "stepType": "EVENT_SOURCE",
+      "icon": "",
+      "indicator": "",
+      "description": "",
+      "deletable": true,
+      "config": {
+        "activityName": "RESTService",
+        "activityGroup": "HTTP",
+        "activityType": "EVENT_SOURCE",
+        "name": "RESTService",
+        "description": "",
+        "path": "/test",
+        "method": [
+          "GET"
+        ],
+        "allowedMediaTypes": [
+          "application/json"
+        ],
+        "headers": [],
+        "queryParams": [],
+        "pathParams": [],
+        "output": "",
+        "showHttpFormSelectionPanel": false,
+        "config.name": "RESTService",
+        "sourceSchemas": []
+      },
+      "activityCluster": null
+    }
+  ],
+  "transitions": [
+    {
+      "id": "egTawzuQArnJATNFiTtdq",
+      "from": "UXtRXDgQHzbcbQSpSwJWI",
+      "to": "pLTEQepOPFGImlKBiBOSC",
+      "handleMap": {
+        "source": "UXtRXDgQHzbcbQSpSwJWI_2",
+        "target": "pLTEQepOPFGImlKBiBOSC_1"
+      },
+      "name": "",
+      "description": "",
+      "type": "DEFAULT",
+      "lineType": "step",
+      "lineColor": "#8c8c8c"
+    },
+    {
+      "id": "mGKVRLozWIYTDpytvecGA",
+      "from": "zKiIJKrXJWRaoRKFncrhQ",
+      "to": "UXtRXDgQHzbcbQSpSwJWI",
+      "handleMap": {
+        "source": "zKiIJKrXJWRaoRKFncrhQ_1",
+        "target": "UXtRXDgQHzbcbQSpSwJWI_1"
+      },
+      "name": "",
+      "description": "",
+      "type": "DEFAULT",
+      "lineType": "step",
+      "lineColor": "#8c8c8c"
+    }
+  ],
+  "diagram": {
+    "pLTEQepOPFGImlKBiBOSC": {
+      "x": 464,
+      "y": 160,
+      "handles": [
+        {
+          "type": "source",
+          "position": "left",
+          "id": "pLTEQepOPFGImlKBiBOSC_1"
+        }
+      ],
+      "sourcePosition": null,
+      "targetPosition": "left"
+    },
+    "UXtRXDgQHzbcbQSpSwJWI": {
+      "x": 224,
+      "y": 160,
+      "handles": [
+        {
+          "type": "target",
+          "position": "left",
+          "id": "UXtRXDgQHzbcbQSpSwJWI_1"
+        },
+        {
+          "type": "source",
+          "position": "right",
+          "id": "UXtRXDgQHzbcbQSpSwJWI_2"
+        }
+      ],
+      "sourcePosition": "right",
+      "targetPosition": "left"
+    },
+    "zKiIJKrXJWRaoRKFncrhQ": {
+      "x": 16,
+      "y": 160,
+      "handles": [
+        {
+          "type": "source",
+          "position": "right",
+          "id": "zKiIJKrXJWRaoRKFncrhQ_1"
+        }
+      ],
+      "sourcePosition": "right",
+      "targetPosition": null
+    }
+  },
+  "notes": [
+    {
+      "id": "OfcqDfrUEJONwXsfvZbgG",
+      "position": {
+        "x": 13.5,
+        "y": -11.5
+      },
+      "description": "Add Text",
+      "width": 150,
+      "height": 50
+    },
+    {
+      "id": "XWKfsXapXLLVGqHXJIqKw",
+      "position": {
+        "x": 13.5,
+        "y": -11.5
+      },
+      "description": "<http://localhost:5173/user/applications/gwUVpBgCIvsFqJKbxiRBo/workflow/cCUMIPKWMpHPUwKLttbDR>",
+      "width": 246,
+      "height": 126
+    }
+  ],
+  "mappings": {
+    "pLTEQepOPFGImlKBiBOSC": {
+      "metaInfo": {
+        "id": "pLTEQepOPFGImlKBiBOSC",
+        "versionInfo": {
+          "version": "1.0.0"
+        },
+        "name": "End",
+        "description": ""
+      },
+      "mappings": {
+        "End": {
+          "message": "$.gv.TestGVs"
+        }
+      },
+      "attributes": {}
+    }
+  },
+  "config": {
+    "name": "New Workflow"
+  },
+  "workflowName": "New Workflow_2"
+}
