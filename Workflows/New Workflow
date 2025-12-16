@@ -1,5 +1,5 @@
 {
-  "folderId": "nKBGcfpLRpEWVltFvyUnZ",
+  "folderId": "wykhXVwsjILydhVmdMlBj",
   "appId": "gwUVpBgCIvsFqJKbxiRBo",
   "id": "BvhlxdIRVQoAPqcCDRKQj",
   "name": "New Workflow",
@@ -73,7 +73,7 @@
         "activityType": "EVENT_SOURCE",
         "name": "RESTService",
         "description": "",
-        "path": "/test",
+        "path": "/test/done",
         "method": [
           "GET"
         ],
@@ -85,7 +85,8 @@
         "pathParams": [],
         "output": "",
         "sourceSchemas": [],
-        "showHttpFormSelectionPanel": false
+        "showHttpFormSelectionPanel": false,
+        "config.name": "RESTService"
       },
       "activityCluster": null
     }
