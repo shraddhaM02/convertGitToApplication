@@ -1,11 +1,11 @@
 {
-  "name": "test123",
+  "name": "convertClone",
   "organizationId": "153476dd-47bc-4620-b907-d1e11e38d9c0",
   "organizationName": "ivoyant",
-  "workspaceId": "hkxydGxOzEJTaUHRhlOae",
-  "workspaceName": "del_ws",
-  "applicationId": "gwUVpBgCIvsFqJKbxiRBo",
-  "applicationName": "test123",
+  "workspaceId": "QaTOkBoBQjBAjeXntPZrV",
+  "workspaceName": "Multi_Module_Feat_demo",
+  "applicationId": "rlbJxfVyNgZJFaoWGoHpm",
+  "applicationName": "convertClone",
   "description": "",
   "level": "Single",
   "integrations": [
@@ -13,6 +13,13 @@
       "workflowId": "BvhlxdIRVQoAPqcCDRKQj",
       "name": "NEw",
       "trigger": "New Workflow",
+      "type": "api",
+      "description": ""
+    },
+    {
+      "workflowId": "jLTZCftoEdghpaerzgDEt",
+      "name": "Addtional",
+      "trigger": "New Workflow_3",
       "type": "api",
       "description": ""
     }
@@ -58,7 +65,7 @@
   ],
   "variables": [
     {
-      "id": "LIKdmVzjetVaDDvxtIyfP",
+      "id": "KiGecwTmAAcxyPgSZHPyY",
       "name": "TestGVs",
       "variables": []
     }
