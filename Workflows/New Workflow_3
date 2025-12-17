@@ -1,5 +1,5 @@
 {
-  "folderId": "nKBGcfpLRpEWVltFvyUnZ",
+  "folderId": "VgMCLJQqgczcHcNCPHlZd",
   "appId": "gwUVpBgCIvsFqJKbxiRBo",
   "id": "jLTZCftoEdghpaerzgDEt",
   "name": "New Workflow_3",
@@ -115,18 +115,7 @@
       "targetPosition": "left"
     }
   },
-  "notes": [
-    {
-      "id": "qhqIvUhqpAOGuqdCqZPmP",
-      "position": {
-        "x": -1.9999999999999964,
-        "y": -142.12653778558874
-      },
-      "description": "<http://localhost:5173/user/applications/gwUVpBgCIvsFqJKbxiRBo/workflow/cCUMIPKWMpHPUwKLttbDR>",
-      "width": 793,
-      "height": 50
-    }
-  ],
+  "notes": [],
   "mappings": {
     "XQBpKUkhWuLAkNNUKYexd": {
       "metaInfo": {
