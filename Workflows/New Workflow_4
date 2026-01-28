@@ -1,5 +1,5 @@
 {
-  "folderId": "SxgdSxUGVLqDdupwHbauG",
+  "folderId": "qCwdecVhRtVRYrkWJmlfV",
   "appId": "gwUVpBgCIvsFqJKbxiRBo",
   "id": "MhGzhbjrlwdCtWPqKqwYM",
   "name": "New Workflow_4",
@@ -53,6 +53,26 @@
         "activityGroup": "Common",
         "name": "End",
         "sourceSchemas": [
+          "YvljqZcKudYHChjnlommR",
+          "PsskcnoEchtIljUbYdpne"
+        ]
+      }
+    },
+    {
+      "id": "YvljqZcKudYHChjnlommR",
+      "stepName": "Add an activity",
+      "stepType": "TEMP",
+      "icon": "",
+      "indicator": "",
+      "description": "",
+      "deletable": true,
+      "config": {
+        "activityType": "TEMP",
+        "activityName": "AddActivity",
+        "activityGroup": "Common",
+        "name": "Add an activity",
+        "config.name": "Add an activity",
+        "sourceSchemas": [
           "PsskcnoEchtIljUbYdpne"
         ]
       }
@@ -60,21 +80,48 @@
   ],
   "transitions": [
     {
-      "id": "initialEdge",
+      "id": "roIpRgfJGQFxByWQkRgOK",
       "from": "PsskcnoEchtIljUbYdpne",
-      "to": "RwMkXMmlrCxVxJDVQpLBR",
+      "to": "YvljqZcKudYHChjnlommR",
       "handleMap": {
         "source": "PsskcnoEchtIljUbYdpne_1",
-        "target": "RwMkXMmlrCxVxJDVQpLBR_1"
+        "target": "YvljqZcKudYHChjnlommR_1"
       },
       "name": "",
       "description": "",
       "type": "DEFAULT",
       "lineType": "step",
       "lineColor": "#8c8c8c"
+    },
+    {
+      "id": "ypDMPtrakXIYhCuAUuFXi",
+      "from": "YvljqZcKudYHChjnlommR",
+      "to": "RwMkXMmlrCxVxJDVQpLBR",
+      "handleMap": {
+        "source": "YvljqZcKudYHChjnlommR_2",
+        "target": "RwMkXMmlrCxVxJDVQpLBR_1"
+      },
+      "name": "",
+      "description": "",
+      "type": "DEFAULT",
+      "lineType": "step",
+      "lineColor": "#6C707E"
     }
   ],
   "diagram": {
+    "PsskcnoEchtIljUbYdpne": {
+      "x": 16,
+      "y": 48,
+      "handles": [
+        {
+          "type": "source",
+          "position": "right",
+          "id": "PsskcnoEchtIljUbYdpne_1"
+        }
+      ],
+      "sourcePosition": "right",
+      "targetPosition": null
+    },
     "RwMkXMmlrCxVxJDVQpLBR": {
       "x": 512,
       "y": 48,
@@ -88,18 +135,23 @@
       "sourcePosition": null,
       "targetPosition": "left"
     },
-    "PsskcnoEchtIljUbYdpne": {
-      "x": 16,
+    "YvljqZcKudYHChjnlommR": {
+      "x": 240,
       "y": 48,
       "handles": [
         {
+          "type": "target",
+          "position": "left",
+          "id": "YvljqZcKudYHChjnlommR_1"
+        },
+        {
           "type": "source",
           "position": "right",
-          "id": "PsskcnoEchtIljUbYdpne_1"
+          "id": "YvljqZcKudYHChjnlommR_2"
         }
       ],
       "sourcePosition": "right",
-      "targetPosition": null
+      "targetPosition": "left"
     }
   },
   "notes": [],

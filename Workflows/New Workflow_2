@@ -1,5 +1,5 @@
 {
-  "folderId": "nKBGcfpLRpEWVltFvyUnZ",
+  "folderId": "PjVFYlStlsMbSDPefkuFw",
   "appId": "gwUVpBgCIvsFqJKbxiRBo",
   "id": "cCUMIPKWMpHPUwKLttbDR",
   "name": "New Workflow_2",
@@ -157,28 +157,7 @@
       "targetPosition": null
     }
   },
-  "notes": [
-    {
-      "id": "OfcqDfrUEJONwXsfvZbgG",
-      "position": {
-        "x": 13.5,
-        "y": -11.5
-      },
-      "description": "Add Text",
-      "width": 150,
-      "height": 50
-    },
-    {
-      "id": "XWKfsXapXLLVGqHXJIqKw",
-      "position": {
-        "x": 13.5,
-        "y": -11.5
-      },
-      "description": "<http://localhost:5173/user/applications/gwUVpBgCIvsFqJKbxiRBo/workflow/cCUMIPKWMpHPUwKLttbDR>",
-      "width": 246,
-      "height": 126
-    }
-  ],
+  "notes": [],
   "mappings": {
     "pLTEQepOPFGImlKBiBOSC": {
       "metaInfo": {
