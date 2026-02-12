@@ -1,5 +1,5 @@
 {
-  "folderId": "NqzfdBIngeZTGGdfaMGnd",
+  "folderId": "LMWuMUZCwzVWXMtbONuRW",
   "appId": "gwUVpBgCIvsFqJKbxiRBo",
   "id": "cCUMIPKWMpHPUwKLttbDR",
   "name": "New Workflow_2",
@@ -51,7 +51,7 @@
     },
     {
       "id": "zKiIJKrXJWRaoRKFncrhQ",
-      "stepName": "RESTService",
+      "stepName": "RESTServices",
       "stepType": "EVENT_SOURCE",
       "icon": "",
       "indicator": "",
@@ -61,7 +61,7 @@
         "activityName": "RESTService",
         "activityGroup": "HTTP",
         "activityType": "EVENT_SOURCE",
-        "name": "RESTService",
+        "name": "RESTServices",
         "description": "",
         "path": "/test",
         "method": [
@@ -75,7 +75,7 @@
         "pathParams": [],
         "output": "",
         "showHttpFormSelectionPanel": false,
-        "config.name": "RESTService",
+        "config.name": "RESTServices",
         "sourceSchemas": []
       },
       "activityCluster": null
